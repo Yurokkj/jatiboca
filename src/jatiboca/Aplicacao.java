@@ -24,14 +24,14 @@ public class Aplicacao {
 		switch(option) {
 			case 1:
 				System.out.println("em qual das lojas sera a entrada?");
-				int qual = sc.nextInt();
-				
-				if(loja.equals(loja1)) {
+				String nullo = sc.nextLine();
+				String qual = sc.nextLine();
+				if("jatiboca".equals(qual)) {
 					System.out.println("qual a quantidade de entrada?(kg)");
 					entrada=sc.nextDouble();
 					estoq1+=entrada;
 					System.out.println("o estoque atual da jatiboca e de "+estoq1);
-				} else if(loja.equals("pontal")) {
+				} else if("pontal".equals(qual)) {
 					System.out.println("aguardando conclusao");
 				}
 				break;
