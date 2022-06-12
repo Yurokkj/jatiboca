@@ -30,13 +30,34 @@ public class Aplicacao {
 					System.out.println("qual a quantidade de entrada?(kg)");
 					entrada=sc.nextDouble();
 					estoq1+=entrada;
-					System.out.println("o estoque atual da jatiboca e de "+estoq1);
+					System.out.println("o estoque atual da jatiboca e de "+estoq1+" kg");
 				} else if("pontal".equals(qual)) {
-					System.out.println("aguardando conclusao");
-				}
+					System.out.println("qual a quantidade de entrada?(kg)");
+					entrada=sc.nextDouble();
+					estoq2+=entrada;
+					System.out.println("o estoque atual da Pontal e de "+estoq2+" kg");
+				}else {
+					System.out.println("erro! nome invalido.");
+					}
 				break;
-				
-				
+			case 2:
+				System.out.println("de qual loja sera retirado o estoque?");
+				 nullo = sc.nextLine();
+				 qual = sc.nextLine();
+				 if("jatiboca".equals(qual)) {
+						System.out.println("qual a quantidade de saida?(kg)");
+						entrada=sc.nextDouble();
+						estoq1-=entrada;
+						System.out.println("o estoque atual da jatiboca e de "+estoq1+" kg");
+					} else if("pontal".equals(qual)) {
+						System.out.println("qual a quantidade de saida?(kg)");
+						entrada=sc.nextDouble();
+						estoq2-=entrada;
+						System.out.println("o estoque atual da Pontal e de "+estoq2+" kg");
+					}else {
+						System.out.println("erro! nome invalido.");
+						}
+				break;
 				
 			
 		}
