@@ -9,7 +9,7 @@ public class Aplicacao {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		double estoq1, estoq2,entrada,saida;
+		double estoq1, estoq2,entrada,saida, transfer;
 		String loja1 = "jatiboca";
 		String loja2 = "pontal";
 		
@@ -27,18 +27,18 @@ public class Aplicacao {
 				String nullo = sc.nextLine();
 				String qual = sc.nextLine();
 				if("jatiboca".equals(qual)) {
-					System.out.println("qual a quantidade de entrada?(kg)");
-					entrada=sc.nextDouble();
-					estoq1+=entrada;
-					System.out.println("o estoque atual da jatiboca e de "+estoq1+" kg");
+						System.out.println("qual a quantidade de entrada?(kg)");
+						entrada=sc.nextDouble();
+						estoq1+=entrada;
+						System.out.println("o estoque atual da jatiboca e de "+estoq1+" kg");
 				} else if("pontal".equals(qual)) {
-					System.out.println("qual a quantidade de entrada?(kg)");
-					entrada=sc.nextDouble();
-					estoq2+=entrada;
-					System.out.println("o estoque atual da Pontal e de "+estoq2+" kg");
+						System.out.println("qual a quantidade de entrada?(kg)");
+						entrada=sc.nextDouble();
+						estoq2+=entrada;
+						System.out.println("o estoque atual da Pontal e de "+estoq2+" kg");
 				}else {
-					System.out.println("erro! nome invalido.");
-					}
+						System.out.println("erro! nome invalido.");
+				}
 				break;
 			case 2:
 				System.out.println("de qual loja sera retirado o estoque?");
@@ -49,16 +49,35 @@ public class Aplicacao {
 						entrada=sc.nextDouble();
 						estoq1-=entrada;
 						System.out.println("o estoque atual da jatiboca e de "+estoq1+" kg");
-					} else if("pontal".equals(qual)) {
+				} else if("pontal".equals(qual)) {
 						System.out.println("qual a quantidade de saida?(kg)");
 						entrada=sc.nextDouble();
 						estoq2-=entrada;
 						System.out.println("o estoque atual da Pontal e de "+estoq2+" kg");
-					}else {
+				}else {
 						System.out.println("erro! nome invalido.");
-						}
+				}
 				break;
-				
+			case 3:
+				System.out.println("De qual loja sera transferido o estoque? ");
+				nullo = sc.nextLine();
+				 qual = sc.nextLine();
+				if("jatiboca".equals(qual)) {
+						System.out.println("Qual a quantidade sera tranferida da "+qual+" ? (kg)");
+						transfer = sc.nextDouble();
+						estoq1-=transfer;
+						estoq2+=transfer;
+						System.out.println("o estoque atual da Jatiboca e de "+estoq1+" e o estoque da Pontal e de "+estoq2);
+				}else if("pontal".equals(qual)) {
+						System.out.println("Qual a quantidade sera tranferida da "+qual+" ? (kg)");
+						transfer = sc.nextDouble();
+						estoq2-=transfer;
+						estoq1+=transfer;
+						System.out.println("o estoque atual da Pontal e de "+estoq2+" e o estoque da Jatiboca e de "+estoq1);
+				}else {
+						System.out.println("Erro! nome invalido.");
+				}
+				break;
 			
 		}
 		sc.close();
